@@ -30,6 +30,11 @@ bot.on('message', (message) => {
         message.channel.send(`${message.author.username} rolled a ${role}!`)
     }  
 
+    if(message.content.startsWith(config.prefix+ 'd12' )) {
+        var role = Math.floor((Math.random() * 12) +1); 
+        message.channel.send(`${message.author.username} rolled a ${role}!`)
+    }  
+    
     if(message.content.startsWith(config.prefix+ 'd10' )) {
         if(message.content.includes('d100')){
             var roll = Math.floor((Math.random() *100) + 1); 
